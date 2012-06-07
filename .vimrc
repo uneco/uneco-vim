@@ -28,6 +28,11 @@ noremap!  
 noremap <BS> 
 noremap! <BS> 
 
+" Use ClipBoard
+" ------------------------------------------------------------
+vmap <silent> "*Y :!pbcopy; pbpaste<CR>
+map <silent> "*p <esc>o<esc>v:!pbpaste<CR>
+
 " NeoBundle
 " ------------------------------------------------------------
 set nocompatible
@@ -41,11 +46,17 @@ endif
 NeoBundle 'https://github.com/Shougo/echodoc.git'
 NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
+NeoBundle 'https://github.com/Shougo/vimproc.git'
 NeoBundle 'https://github.com/Shougo/vim-vcs.git'
 NeoBundle 'https://github.com/Shougo/vimfiler.git'
 NeoBundle 'https://github.com/Shougo/vimshell.git'
 NeoBundle 'https://github.com/Shougo/vinarise.git'
 NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
+NeoBundle 'https://github.com/thinca/vim-quickrun.git'
+NeoBundle 'https://github.com/vim-scripts/sudo.vim.git'
+NeoBundle 'https://github.com/Sixeight/unite-grep.git'
+NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
+NeoBundle 'https://github.com/tpope/vim-rails.git'
 
 filetype indent on
 filetype plugin on
@@ -64,3 +75,7 @@ let g:Powerline_symbols = 'fancy'
 " ------------------------------------------------------------
 let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
+
+" UniteGrep
+"
+nnoremap <silent> \g :Unite grep:%:-iHRn<CR>
