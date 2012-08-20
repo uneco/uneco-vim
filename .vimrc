@@ -28,6 +28,11 @@ noremap!  
 noremap <BS> 
 noremap! <BS> 
 
+function! CloudAppUpload()
+  let l:url = vimproc#system('cloudapp-upload-open ' . expand('%'))
+endfunction
+command! CloudAppUpload :call CloudAppUpload()
+
 " Use ClipBoard
 " ------------------------------------------------------------
 vmap <silent> "*Y :!pbcopy; pbpaste<CR>
@@ -54,9 +59,14 @@ NeoBundle 'https://github.com/Shougo/vinarise.git'
 NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'https://github.com/thinca/vim-quickrun.git'
 NeoBundle 'https://github.com/vim-scripts/sudo.vim.git'
+NeoBundle 'https://github.com/vim-scripts/AnsiEsc.vim.git'
 NeoBundle 'https://github.com/Sixeight/unite-grep.git'
 NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'https://github.com/tpope/vim-rails.git'
+NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
+NeoBundle 'https://github.com/mattn/gist-vim.git'
+NeoBundle 'https://github.com/bbommarito/vim-slim'
+NeoBundle 'https://github.com/mikewest/vim-markdown.git'
 
 filetype indent on
 filetype plugin on
@@ -79,3 +89,21 @@ let g:vimfiler_safe_mode_by_default=0
 " UniteGrep
 "
 nnoremap <silent> \g :Unite grep:%:-iHRn<CR>
+
+" Rick
+command! Rick :%s/:\(\w\+\) =>/\1:/g
+
+
+" QuickRun Color
+
+let ansi_buffer = quickrun#outputter#buffer#new()
+function! ansi_buffer.init(session)
+  call call(quickrun#outputter#buffer#new().init,  [a:session],  self)
+endfunction
+
+function! ansi_buffer.finish(session)
+  AnsiEsc
+  call call(quickrun#outputter#buffer#new().finish,  [a:session], self)
+endfunction
+
+call quickrun#register_outputter("ansi_buffer", ansi_buffer)
