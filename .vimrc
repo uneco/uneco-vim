@@ -65,8 +65,9 @@ NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'https://github.com/tpope/vim-rails.git'
 NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'https://github.com/mattn/gist-vim.git'
-NeoBundle 'https://github.com/bbommarito/vim-slim'
+NeoBundle 'https://github.com/bbommarito/vim-slim.git'
 NeoBundle 'https://github.com/mikewest/vim-markdown.git'
+NeoBundle 'https://github.com/tpope/vim-surround.git'
 
 filetype indent on
 filetype plugin on
@@ -87,14 +88,11 @@ let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
 
 " UniteGrep
-"
+" ------------------------------------------------------------
 nnoremap <silent> \g :Unite grep:%:-iHRn<CR>
 
-" Rick
-command! Rick :%s/:\(\w\+\) =>/\1:/g
-
-
 " QuickRun Color
+" ------------------------------------------------------------
 
 let ansi_buffer = quickrun#outputter#buffer#new()
 function! ansi_buffer.init(session)
@@ -107,3 +105,7 @@ function! ansi_buffer.finish(session)
 endfunction
 
 call quickrun#register_outputter("ansi_buffer", ansi_buffer)
+
+" Ruby Rick
+" ------------------------------------------------------------
+command! Rick :%s/:\(\w\+\) =>/\1:/g
