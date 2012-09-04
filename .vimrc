@@ -74,6 +74,7 @@ NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
 NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
 NeoBundle 'https://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'https://github.com/sjl/gundo.vim'
+NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
 
 filetype indent on
 filetype plugin on
