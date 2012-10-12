@@ -72,9 +72,11 @@ NeoBundle 'https://github.com/tpope/vim-surround.git'
 NeoBundle 'https://github.com/othree/html5.vim.git'
 NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
 NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
-NeoBundle 'https://github.com/vim-scripts/YankRing.vim'
+" NeoBundle 'https://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'https://github.com/sjl/gundo.vim'
 NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
+NeoBundle "https://github.com/osyo-manga/unite-quickfix"
+NeoBundle "https://github.com/osyo-manga/shabadou.vim"
 
 filetype indent on
 filetype plugin on
@@ -138,6 +140,15 @@ function InsertTabWrapper()
   endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" Quickrun
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter/buffer/split" : ":botright 8sp",
+\       "runner" : "vimproc",
+\       "runner/vimproc/updatetime" : 200,
+\   }
+\}
 
 " Ruby Rick
 " ------------------------------------------------------------
