@@ -72,11 +72,11 @@ NeoBundle 'https://github.com/tpope/vim-surround.git'
 NeoBundle 'https://github.com/othree/html5.vim.git'
 NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
 NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
-" NeoBundle 'https://github.com/vim-scripts/YankRing.vim'
 NeoBundle 'https://github.com/sjl/gundo.vim'
 NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
 NeoBundle "https://github.com/osyo-manga/unite-quickfix"
-NeoBundle "https://github.com/osyo-manga/shabadou.vim"
+NeoBundle "https://github.com/osyo-manga/shabadou.vim.git"
+NeoBundle "https://github.com/vim-scripts/nginx.vim.git"
 
 filetype indent on
 filetype plugin on
