@@ -56,6 +56,7 @@ NeoBundle 'https://github.com/Shougo/vim-vcs.git'
 NeoBundle 'https://github.com/Shougo/vimfiler.git'
 NeoBundle 'https://github.com/Shougo/vimshell.git'
 NeoBundle 'https://github.com/Shougo/vinarise.git'
+NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'https://github.com/thinca/vim-quickrun.git'
 NeoBundle 'https://github.com/vim-scripts/sudo.vim.git'
@@ -69,6 +70,14 @@ NeoBundle 'https://github.com/bbommarito/vim-slim.git'
 NeoBundle 'https://github.com/mikewest/vim-markdown.git'
 NeoBundle 'https://github.com/tpope/vim-surround.git'
 NeoBundle 'https://github.com/vim-scripts/css_color.vim'
+NeoBundle 'https://github.com/othree/html5.vim.git'
+NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
+NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
+NeoBundle 'https://github.com/sjl/gundo.vim'
+NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
+NeoBundle "https://github.com/osyo-manga/unite-quickfix"
+NeoBundle "https://github.com/osyo-manga/shabadou.vim.git"
+NeoBundle "https://github.com/vim-scripts/nginx.vim.git"
 
 filetype indent on
 filetype plugin on
@@ -89,14 +98,11 @@ let g:vimfiler_as_default_explorer=1
 let g:vimfiler_safe_mode_by_default=0
 
 " UniteGrep
-"
+" ------------------------------------------------------------
 nnoremap <silent> \g :Unite grep:%:-iHRn<CR>
 
-" Rick
-command! Rick :%s/:\(\w\+\) =>/\1:/g
-
-
 " QuickRun Color
+" ------------------------------------------------------------
 
 let ansi_buffer = quickrun#outputter#buffer#new()
 function! ansi_buffer.init(session)
@@ -109,3 +115,42 @@ function! ansi_buffer.finish(session)
 endfunction
 
 call quickrun#register_outputter("ansi_buffer", ansi_buffer)
+
+" Gundo
+" ------------------------------------------------------------
+nmap U :<C-u>GundoToggle<CR>
+
+" NeoComplcache
+" ------------------------------------------------------------
+
+"  Automatically Startup
+let g:neocomplcache_enable_at_startup = 1
+
+" Tab Complete
+function InsertTabWrapper()
+  if pumvisible()
+    return "\<c-n>"
+  endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+    return "\<tab>"
+  elseif exists('&omnifunc') && &omnifunc == ''
+    return "\<c-n>"
+  else
+    return "\<c-x>\<c-o>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" Quickrun
+let g:quickrun_config = {
+\   "_" : {
+\       "outputter/buffer/split" : ":botright 8sp",
+\       "runner" : "vimproc",
+\       "runner/vimproc/updatetime" : 200,
+\   }
+\}
+
+" Ruby Rick
+" ------------------------------------------------------------
+command! Rick :%s/:\(\w\+\) =>/\1:/g
