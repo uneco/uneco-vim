@@ -12,6 +12,9 @@ set laststatus=2
 set ambiwidth=double
 syntax on
 
+filetype indent on
+filetype plugin on
+
 " Insert Mode Map
 " ------------------------------------------------------------
 imap <C-a> <Home>
@@ -28,11 +31,6 @@ noremap!  
 noremap <BS> 
 noremap! <BS> 
 
-function! CloudAppUpload()
-  let l:url = vimproc#system('cloudapp-upload-open ' . expand('%'))
-endfunction
-command! CloudAppUpload :call CloudAppUpload()
-
 " Use ClipBoard
 " ------------------------------------------------------------
 vmap <silent> "*Y :!pbcopy; pbpaste<CR>
@@ -40,47 +38,7 @@ map <silent> "*p <esc>o<esc>v:!pbpaste<CR>
 
 " NeoBundle
 " ------------------------------------------------------------
-set nocompatible
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle'))
-endif
-
-NeoBundle 'https://github.com/Shougo/echodoc.git'
-NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'https://github.com/Shougo/unite.vim.git'
-NeoBundle 'https://github.com/Shougo/vimproc.git'
-NeoBundle 'https://github.com/Shougo/vim-vcs.git'
-NeoBundle 'https://github.com/Shougo/vimfiler.git'
-NeoBundle 'https://github.com/Shougo/vimshell.git'
-NeoBundle 'https://github.com/Shougo/vinarise.git'
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
-NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
-NeoBundle 'https://github.com/thinca/vim-quickrun.git'
-NeoBundle 'https://github.com/vim-scripts/sudo.vim.git'
-NeoBundle 'https://github.com/vim-scripts/AnsiEsc.vim.git'
-NeoBundle 'https://github.com/Sixeight/unite-grep.git'
-NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
-NeoBundle 'https://github.com/tpope/vim-rails.git'
-NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
-NeoBundle 'https://github.com/mattn/gist-vim.git'
-NeoBundle 'https://github.com/bbommarito/vim-slim.git'
-NeoBundle 'https://github.com/mikewest/vim-markdown.git'
-NeoBundle 'https://github.com/tpope/vim-surround.git'
-NeoBundle 'https://github.com/vim-scripts/css_color.vim'
-NeoBundle 'https://github.com/othree/html5.vim.git'
-NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
-NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
-NeoBundle 'https://github.com/sjl/gundo.vim'
-NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
-NeoBundle "https://github.com/osyo-manga/unite-quickfix"
-NeoBundle "https://github.com/osyo-manga/shabadou.vim.git"
-NeoBundle "https://github.com/vim-scripts/nginx.vim.git"
-
-filetype indent on
-filetype plugin on
+source ~/.vim/bundle.vim
 
 " Unite 
 " ------------------------------------------------------------
