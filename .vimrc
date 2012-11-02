@@ -65,8 +65,10 @@ NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
 NeoBundle 'https://github.com/tpope/vim-rails.git'
 NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'https://github.com/mattn/gist-vim.git'
-NeoBundle 'https://github.com/bbommarito/vim-slim'
+NeoBundle 'https://github.com/bbommarito/vim-slim.git'
 NeoBundle 'https://github.com/mikewest/vim-markdown.git'
+NeoBundle 'https://github.com/tpope/vim-surround.git'
+NeoBundle 'https://github.com/vim-scripts/css_color.vim'
 
 filetype indent on
 filetype plugin on
