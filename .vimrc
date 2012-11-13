@@ -36,6 +36,10 @@ noremap! <BS> 
 vmap <silent> "*Y :!pbcopy; pbpaste<CR>
 map <silent> "*p <esc>o<esc>v:!pbpaste<CR>
 
+" Swap File
+" ------------------------------------------------------------
+set backupskip=/tmp/*,/private/tmp/*
+
 " NeoBundle
 " ------------------------------------------------------------
 source ~/.vim/bundle.vim

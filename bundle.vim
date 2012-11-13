@@ -35,7 +35,6 @@ NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
 NeoBundle 'https://github.com/osyo-manga/unite-quickfix'
 NeoBundle 'https://github.com/osyo-manga/shabadou.vim.git'
 NeoBundle 'https://github.com/vim-scripts/nginx.vim.git'
-NeoBundle 'https://github.com/lilydjwg/colorizer.git'
 
 NeoBundle 'custom', {'base': '~/.vim/', 'type': 'nosync'}
 NeoBundleLocal ~/.vim/labs
