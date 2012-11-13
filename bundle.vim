@@ -1,4 +1,4 @@
-set runtimepath^=~/.vim/bundle/neobundle.vim
+set runtimepath^=~/.vim/neobundle.vim
 let s:log = expand('~/.vim/info/neobundle/')
 if !isdirectory(s:log)
   call mkdir(s:log, 'p')
@@ -27,15 +27,15 @@ NeoBundle 'https://github.com/mattn/gist-vim.git'
 NeoBundle 'https://github.com/bbommarito/vim-slim.git'
 NeoBundle 'https://github.com/mikewest/vim-markdown.git'
 NeoBundle 'https://github.com/tpope/vim-surround.git'
-NeoBundle 'https://github.com/vim-scripts/css_color.vim'
 NeoBundle 'https://github.com/othree/html5.vim.git'
 NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
 NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
 NeoBundle 'https://github.com/sjl/gundo.vim'
 NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
-NeoBundle "https://github.com/osyo-manga/unite-quickfix"
-NeoBundle "https://github.com/osyo-manga/shabadou.vim.git"
-NeoBundle "https://github.com/vim-scripts/nginx.vim.git"
+NeoBundle 'https://github.com/osyo-manga/unite-quickfix'
+NeoBundle 'https://github.com/osyo-manga/shabadou.vim.git'
+NeoBundle 'https://github.com/vim-scripts/nginx.vim.git'
+NeoBundle 'https://github.com/lilydjwg/colorizer.git'
 
 NeoBundle 'custom', {'base': '~/.vim/', 'type': 'nosync'}
 NeoBundleLocal ~/.vim/labs
