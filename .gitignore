@@ -1,7 +1,6 @@
-.DS_Store
+/bundle
+*.log
+
 *.swp
 *.swo
-
-/bundle
-
-*.log
+.DS_Store
