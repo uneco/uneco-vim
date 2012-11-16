@@ -1,4 +1,5 @@
 /bundle
+/config/custom/*.vim
 *.log
 
 *.swp

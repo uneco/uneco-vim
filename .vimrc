@@ -1,10 +1,12 @@
 " NeoBundle
 " ------------------------------------------------------------
-source ~/.vim/bundle.vim
+source ~/.vim/neobundle-config.vim
 
 " Configurations
 " ------------------------------------------------------------
-let config_path = '~/.vim/config/*.vim'
-for conf in split(glob(config_path), '\n')
-  exe 'source' conf
+let config_pathes = '~/.vim/config/*.vim:~/.vim/config/custom/*.vim'
+for config_path in split(config_pathes, ':')
+  for conf in split(glob(config_path), '\n')
+    exe 'source' conf
+  endfor
 endfor
