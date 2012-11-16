@@ -1,6 +1,6 @@
 " NeoBundle
 " ------------------------------------------------------------
-source ~/.vim/neobundle-config.vim
+source ~/.vim/config/neobundle/neobundle.vim
 
 " Configurations
 " ------------------------------------------------------------
