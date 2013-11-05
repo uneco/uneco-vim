@@ -35,6 +35,9 @@ NeoBundle 'https://github.com/tpope/vim-rails.git'
 " Elixir
 NeoBundle 'https://github.com/huffman/vim-elixir.git'
 
+" JSON
+NeoBundle 'https://github.com/elzr/vim-json.git'
+
 " Scala
 NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
 
@@ -43,7 +46,6 @@ NeoBundle 'https://github.com/othree/html5.vim.git'
 NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
 NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
 NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
-NeoBundle 'https://github.com/bbommarito/vim-slim.git'
 NeoBundle 'https://github.com/groenewege/vim-less.git'
 NeoBundle 'https://github.com/tpope/vim-haml.git'
 NeoBundle 'https://github.com/tpope/vim-surround.git'
