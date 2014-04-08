@@ -7,5 +7,4 @@ let g:neobundle_log_filename = s:log . strftime('%Y-%m-%d.log')
 call neobundle#rc(expand('~/.vim/bundle'))
 source ~/.vim/bundle.vim
 
-NeoBundle 'custom', {'base': '~/.vim/', 'type': 'nosync'}
 NeoBundleLocal ~/.vim/labs
