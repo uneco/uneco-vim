@@ -13,7 +13,6 @@ NeoBundle 'https://github.com/Shougo/vinarise.git'
 NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'https://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'https://github.com/sjl/gundo.vim'
-NeoBundle 'https://github.com/tsaleh/vim-matchit.git'
 NeoBundle 'https://github.com/thinca/vim-quickrun.git'
 NeoBundle 'https://github.com/osyo-manga/shabadou.vim.git'
 
