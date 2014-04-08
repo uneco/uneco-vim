@@ -2,63 +2,61 @@
 " ------------------------------------------------------------
 
 " Power Tools
-NeoBundle 'https://github.com/Shougo/unite.vim.git'
-NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'https://github.com/Shougo/echodoc.git'
-NeoBundle 'https://github.com/Shougo/vimproc.git'
-NeoBundle 'https://github.com/Shougo/vim-vcs.git'
-NeoBundle 'https://github.com/Shougo/vimfiler.git'
-NeoBundle 'https://github.com/Shougo/vimshell.git'
-NeoBundle 'https://github.com/Shougo/vinarise.git'
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
-NeoBundle 'https://github.com/vim-scripts/sudo.vim.git'
-NeoBundle 'https://github.com/sjl/gundo.vim'
-NeoBundle 'https://github.com/thinca/vim-quickrun.git'
-NeoBundle 'https://github.com/osyo-manga/shabadou.vim.git'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/echodoc'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vim-vcs'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vinarise'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'osyo-manga/shabadou.vim'
 
 " Unite
-NeoBundle 'https://github.com/Sixeight/unite-grep.git'
-NeoBundle 'https://github.com/osyo-manga/unite-quickfix'
+NeoBundle 'Sixeight/unite-grep'
+NeoBundle 'osyo-manga/unite-quickfix'
 
 " UI Appearance
-NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
-NeoBundle 'https://github.com/vim-scripts/AnsiEsc.vim.git'
+NeoBundle 'Lokaltog/vim-powerline'
 
 " Languages and Frameworks
 " ------------------------------------------------------------
 
 " Ruby + Rails
-NeoBundle 'https://github.com/vim-ruby/vim-ruby.git'
-NeoBundle 'https://github.com/tpope/vim-rails.git'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
 
 " Elixir
-NeoBundle 'https://github.com/huffman/vim-elixir.git'
+NeoBundle 'huffman/vim-elixir'
 
 " JSON
-NeoBundle 'https://github.com/elzr/vim-json.git'
+NeoBundle 'elzr/vim-json'
 
 " Scala
-NeoBundle 'https://github.com/derekwyatt/vim-scala.git'
+NeoBundle 'derekwyatt/vim-scala'
 
 " HTML + CSS + JS + Meta Languages
-NeoBundle 'https://github.com/othree/html5.vim.git'
-NeoBundle 'https://github.com/hail2u/vim-css3-syntax'
-NeoBundle 'https://github.com/hokaccha/vim-html5validator.git'
-NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
-NeoBundle 'https://github.com/groenewege/vim-less.git'
-NeoBundle 'https://github.com/tpope/vim-haml.git'
-NeoBundle 'https://github.com/tpope/vim-surround.git'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'hokaccha/vim-html5validator'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-surround'
 
 " Nginx
-NeoBundle 'https://github.com/vim-scripts/nginx.vim.git'
+NeoBundle 'vim-scripts/nginx.vim'
 
 " Document
-NeoBundle 'https://github.com/mikewest/vim-markdown.git'
-NeoBundle 'https://github.com/ujihisa/rdoc.vim.git'
-NeoBundle 'https://github.com/timcharper/textile.vim'
+NeoBundle 'mikewest/vim-markdown'
+NeoBundle 'ujihisa/rdoc.vim'
 
 " Others
 " ------------------------------------------------------------
 
 " Gist
-NeoBundle 'https://github.com/mattn/gist-vim.git'
+NeoBundle 'mattn/gist-vim'
