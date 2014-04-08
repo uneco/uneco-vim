@@ -55,6 +55,9 @@ NeoBundle 'vim-scripts/nginx.vim'
 NeoBundle 'mikewest/vim-markdown'
 NeoBundle 'ujihisa/rdoc.vim'
 
+" Git
+NeoBundle 'tpope/vim-fugitive'
+
 " Others
 " ------------------------------------------------------------
 
